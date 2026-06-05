@@ -71,3 +71,9 @@ Define la topología de hardware y los nodos físicos sobre los cuales corre el 
 ### 4. Vista de Despliegue
 Muestra cómo se distribuyen los componentes del sistema en un entorno real de producción en la nube de forma descentralizada.
 ![Vista de Despliegue](Vista4.png)
+
+---
+
+## Declaración de IA 
+
+Sí se utilizó IA para la realización de este ADR, principalmente para los mermaid de los diagramas que después se pasaron a Draw.io.
