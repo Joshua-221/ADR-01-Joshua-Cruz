@@ -14,4 +14,12 @@ Grind Core es una plataforma web centralizada diseñada para la gestión de atle
 
 Para avanzar en el desarrollo y garantizar un estándar técnico riguroso, se va a documentar formalmente las decisiones de diseño mediante el modelo de vistas arquitectónicas, asegurando una separación clara de responsabilidades lógicas, dinámicas y de infraestructura. Además, surge la necesidad de evaluar el entorno de ejecución idóneo para mitigar la latencia en cálculos matemáticos pesados en tiempo real (estimaciones de fuerza y fatiga).
 
+---
 
+## Decisión
+
+Se decide adoptar formalmente el **Modelo de Vistas Arquitectónicas (Lógica, Procesos, Física y Despliegue)** para estandarizar la documentación técnica del sistema Grind Core. 
+
+Como parte de esta definición de vistas, se toman las siguientes determinaciones tecnológicas específicas:
+1. **Vista Lógica:** Mantener el patrón **.NET MVC**, pero migrar formalmente el entorno de ejecución de .NET Core a **.NET 10** para aprovechar las optimizaciones de rendimiento del JIT, recolección de basura optimizada y menor consumo de memoria. Los controladores canalizarán las peticiones HTTP y los modelos encapsularán tanto el esquema de PostgreSQL como las fórmulas de Powerlifting.
+2. **Vista Física y Despliegue:** Adoptar un modelo híbrido descentralizado donde la base de datos **PostgreSQL** se aloja de manera administrada de forma remota (ej. Supabase/Neon) y el Servidor de Aplicación .NET 10 se despliega de forma independiente para facilitar escalabilidad horizontal futura.
