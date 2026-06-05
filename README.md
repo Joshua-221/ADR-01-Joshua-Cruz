@@ -37,3 +37,15 @@ Como parte de esta definición de vistas, se toman las siguientes determinacione
 | **Documentación única mediante C4 Model (C1-C4)** | Aunque es excelente para vistas estáticas, el estándar de la materia solicita explícitamente el enfoque multi-vista clásica para evaluar la concurrencia y despliegue físico por separado. |
 | **Arquitectura Limpia (Clean Architecture) con Capas Desacopladas** | Hubiera implicado separar el proyecto en múltiples bibliotecas de clases separadas (.Core, .Infrastructure, .Web). Se descarta momentáneamente para mantener la simplicidad inicial sobre el modelo .NET 10 MVC nativo en un solo ensamblado. |
 | **Permanecer en .NET Core / .NET 8** | Aunque es estable, carece de las últimas optimizaciones en el manejo de memoria eficiente y rendimiento en ejecución concurrente que introduce .NET 10 para sistemas de analíticas deportivas. |
+
+---
+
+## Consecuencias
+
+** Lo que gano:**
+- **Técnica:** Mayor rendimiento y velocidad de respuesta del backend al procesar fórmulas de entrenamiento gracias a .NET 10. Estructuración formal de la infraestructura que facilita la migración rápida a entornos productivos en la nube.
+- **Proceso o equipo:** Comprensión total de los flujos del sistema en tiempo de ejecución. Cualquier nuevo desarrollador sabrá exactamente qué canal físico o lógico sigue la información desde que se digita en la pantalla hasta que impacta la base de datos PostgreSQL.
+
+** Lo que sacrifico o asumo:**
+- **Limitación técnica:** Al mantener la lógica dentro del modelo MVC tradicional en un monolito, si las fórmulas de RPE se vuelven extremadamente complejas, los Modelos de .NET podrían sobrecargarse de responsabilidades (deuda técnica a mitigar extrayendo servicios en el futuro).
+- **Deuda o riesgo:** Migrar a .NET 10 (versión ultra-reciente) puede generar ligeras incompatibilidades iniciales con ciertas herramientas ORM o librerías secundarias de terceros que aún no estén completamente actualizadas.
