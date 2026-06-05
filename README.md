@@ -30,3 +30,10 @@ Como parte de esta definición de vistas, se toman las siguientes determinacione
 - **Trazabilidad de Procesos:** Definir una Vista de Procesos permite mitigar condiciones de carrera y asegurar que las transacciones de actualización de récords personales (PRs) mantengan una secuencia lógica estricta y predecible.
 - **Alineación con Diagramas C1/C2:** Las vistas físicas y lógicas expanden de forma directa el contenedor detallado en nuestro diseño estático previo, permitiendo mapear los componentes en HTML5/Tailwind y .NET de manera fidedigna.
 
+### Alternativas consideradas
+
+| Alternativa | Por qué la descarté |
+|-------------|---------------------|
+| **Documentación única mediante C4 Model (C1-C4)** | Aunque es excelente para vistas estáticas, el estándar de la materia solicita explícitamente el enfoque multi-vista clásica para evaluar la concurrencia y despliegue físico por separado. |
+| **Arquitectura Limpia (Clean Architecture) con Capas Desacopladas** | Hubiera implicado separar el proyecto en múltiples bibliotecas de clases separadas (.Core, .Infrastructure, .Web). Se descarta momentáneamente para mantener la simplicidad inicial sobre el modelo .NET 10 MVC nativo en un solo ensamblado. |
+| **Permanecer en .NET Core / .NET 8** | Aunque es estable, carece de las últimas optimizaciones en el manejo de memoria eficiente y rendimiento en ejecución concurrente que introduce .NET 10 para sistemas de analíticas deportivas. |
