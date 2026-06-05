@@ -46,6 +46,28 @@ Como parte de esta definición de vistas, se toman las siguientes determinacione
 - **Técnica:** Mayor rendimiento y velocidad de respuesta del backend al procesar fórmulas de entrenamiento gracias a .NET 10. Estructuración formal de la infraestructura que facilita la migración rápida a entornos productivos en la nube.
 - **Proceso o equipo:** Comprensión total de los flujos del sistema en tiempo de ejecución. Cualquier nuevo desarrollador sabrá exactamente qué canal físico o lógico sigue la información desde que se digita en la pantalla hasta que impacta la base de datos PostgreSQL.
 
-** Lo que sacrifico o asumo:**
+**Lo que sacrifico o asumo:**
 - **Limitación técnica:** Al mantener la lógica dentro del modelo MVC tradicional en un monolito, si las fórmulas de RPE se vuelven extremadamente complejas, los Modelos de .NET podrían sobrecargarse de responsabilidades (deuda técnica a mitigar extrayendo servicios en el futuro).
 - **Deuda o riesgo:** Migrar a .NET 10 (versión ultra-reciente) puede generar ligeras incompatibilidades iniciales con ciertas herramientas ORM o librerías secundarias de terceros que aún no estén completamente actualizadas.
+
+---
+
+## Diagramas de las Vistas Arquitectónicas
+
+A continuación, se detallan las 4 vistas arquitectónicas requeridas para el ecosistema **Grind Core**:
+
+### 1. Vista Lógica
+Muestra la organización del código en componentes lógicos basados en el patrón MVC dentro de la solución de .NET 10.
+![Vista Lógica](Vista1.png)
+
+### 2. Vista de Procesos
+Representa el flujo dinámico, la comunicación y el comportamiento en tiempo de ejecución cuando un atleta registra sus series de entrenamiento.
+![Vista de Procesos](Vista2.png)
+
+### 3. Vista Física
+Define la topología de hardware y los nodos físicos sobre los cuales corre el software durante el desarrollo del proyecto.
+![Vista Física](Vista3.png)
+
+### 4. Vista de Despliegue
+Muestra cómo se distribuyen los componentes del sistema en un entorno real de producción en la nube de forma descentralizada.
+![Vista de Despliegue](Vista4.png)
