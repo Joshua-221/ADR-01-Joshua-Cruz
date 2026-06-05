@@ -23,3 +23,10 @@ Se decide adoptar formalmente el **Modelo de Vistas Arquitectónicas (Lógica, P
 Como parte de esta definición de vistas, se toman las siguientes determinaciones tecnológicas específicas:
 1. **Vista Lógica:** Mantener el patrón **.NET MVC**, pero migrar formalmente el entorno de ejecución de .NET Core a **.NET 10** para aprovechar las optimizaciones de rendimiento del JIT, recolección de basura optimizada y menor consumo de memoria. Los controladores canalizarán las peticiones HTTP y los modelos encapsularán tanto el esquema de PostgreSQL como las fórmulas de Powerlifting.
 2. **Vista Física y Despliegue:** Adoptar un modelo híbrido descentralizado donde la base de datos **PostgreSQL** se aloja de manera administrada de forma remota (ej. Supabase/Neon) y el Servidor de Aplicación .NET 10 se despliega de forma independiente para facilitar escalabilidad horizontal futura.
+
+### ¿Por qué?
+
+- **Rendimiento Puro (.NET 10):** El procesamiento dinámico de algoritmos de powerlifting (calcular el e1RM instantáneo basándose en tablas de RPE y alertar sobre sobrecargas indeseadas) requiere la menor latencia de backend posible. .NET 10 ofrece mejoras críticas de compilación nativa AOT y optimizaciones de hardware para procesadores de silicio.
+- **Trazabilidad de Procesos:** Definir una Vista de Procesos permite mitigar condiciones de carrera y asegurar que las transacciones de actualización de récords personales (PRs) mantengan una secuencia lógica estricta y predecible.
+- **Alineación con Diagramas C1/C2:** Las vistas físicas y lógicas expanden de forma directa el contenedor detallado en nuestro diseño estático previo, permitiendo mapear los componentes en HTML5/Tailwind y .NET de manera fidedigna.
+
